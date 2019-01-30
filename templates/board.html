@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+        const post_message=()=>
+        {
+            let titile = document.getElementById('title').value;
+            let email = document.getElementById('email').value;
+            let message = document.getElementById('message').value;
+            if (titile && email && message) {
+                axios.post('http://172.16.0.101:8888/messages_board', {
+                    title: titile,
+                    email: email,
+                    message: message,
+                })
+                    .then(function (response) {
+                        // console.log(response.data);
+                        let jsonObj = response.data;
+                        if (jsonObj.status == 0) {
+                            alert('提交成功');
+                        } else {
+                            alert(jsonObj.msg);
+                        }
+                    })
+                    .catch(function (error) {
+                        alert('提交失败')
+                        console.log(error);
+                    });
+            } else {
+                alert('参数不可为空！');
+            }
+        }
+
+    
+    </script>
+
+</head>
+
+<body>
+
+    titile: <input type="text" name="titile" id="title"><br>
+    email: <input type="text" name="email" id="email"><br>
+    <!-- message: <input type="text" name="message" id="message"><br> -->
+    message：<br/>
+    <textarea rows="3" cols="20" id="message"></textarea>
+    <button type="button" onclick="post_message()">提交数据</button>
+    <button type="button" onclick="post_message()">提交</button>
+</body>
+</html>
