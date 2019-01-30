@@ -55,6 +55,10 @@ MySQL [messages_board]> desc messages_board;
 6 rows in set (0.00 sec)
 ```
 
+#### 最终效果
+
+![](static/img/message_board.png)
+
 #### 其他
 
 - 第一次带前端模板写， 还有前端和后端的判断Email是否符合格式没写，后续加上
