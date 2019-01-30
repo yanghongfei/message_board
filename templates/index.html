@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>CloudOpenDevOps MessageBoard</title>
+        <link rel="stylesheet" href="../static/reset.css" title="" type="text/css" media="screen">
+        <link rel="stylesheet" href="../static/style.css" type="text/css" media="screen">
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script type="text/javascript" src="static/js/board.js"></script>
+        <script>
+        </script>
+        <!--<script>-->
+            <!--const post_message=()=>-->
+        <!--{-->
+            <!--let name = document.getElementById('name').value;-->
+            <!--// console.log(name);-->
+            <!--let email = document.getElementById('email').value;-->
+            <!--// console.log(email)-->
+            <!--let message = document.getElementById('message').value;-->
+            <!--// console.log(message)-->
+            <!--if (name && email && message) {-->
+                <!--axios.post('/messages_board', {-->
+                    <!--title: name,-->
+                    <!--email: email,-->
+                    <!--message: message,-->
+                <!--})-->
+                    <!--.then(function (response) {-->
+                        <!--// console.log(response.data);-->
+                        <!--let jsonObj = response.data;-->
+                        <!--if (jsonObj.status == 0) {-->
+                            <!--alert('提交成功');-->
+                        <!--} else {-->
+                            <!--alert(jsonObj.msg);-->
+                        <!--}-->
+                    <!--})-->
+                    <!--.catch(function (error) {-->
+                        <!--alert('提交失败')-->
+                        <!--console.log(error);-->
+                    <!--});-->
+            <!--} else {-->
+                <!--alert('Name, Email, Messages不可为空！');-->
+            <!--}-->
+        <!--}-->
+        <!--</script>-->
+
+
+    </head>
+    <body id="body" class="color-blue">
+        <div id="settings">
+            <!--<a href="#" class="button">Show panel</a>-->
+            <div class="content">
+                <ul class="colors">
+                    <li class="red"><a href="#color-red">Color red</a></li>
+                    <li class="blue"><a href="#color-blue">Color blue</a></li>
+                    <li class="green"><a href="#color-green">Color green</a></li>
+                    <li class="orange"><a href="#color-orange">Color orange</a></li>
+                    <li class="violet"><a href="#color-violet">Color violet</a></li>
+                </ul>
+            </div>
+        </div>
+		<!--<div class="copyrights">Col <a href="http://www.cssmoban.com/"  title="��վģ��">��վģ��</a></div>-->
+        <div id="wrapper">
+            <!-- MAIN CONTENT  -->
+            <section id="content">
+                <h1 id="main-head">Welcome to the CODO message board</h1>
+                <!-- END MAIN CONTENT  -->
+                <div class="aside" id="timer">
+                </div>
+            </section>
+            <!--<aside id="newsletter">-->
+                <!--<div class="wrapper">-->
+                    <!--<form action="http://www.opendevops.cn" id="newsletter-form" method="get">-->
+                        <!--<p>-->
+                            <!--<label for="email" class="main">点击Click Me 访问官网</label>-->
+                            <!--<input type="text" name="email" class="email required" id="email" placeholder="http://www.opendevops.cn" />-->
+                        <!--</p>-->
+                        <!--<input type="submit" value="Click Me" class="submit" />-->
+                    <!--</form>-->
+                <!--</div>-->
+            <!--</aside>-->
+        </div>
+        <aside id="secondary">
+            <div class="wrapper">
+                <section id="about">
+                    <h2>About CODO</h2>
+                    <p>CODO是一款为用户提供企业多混合云、自动化运维、完全开源的云管理平台</p>
+                    <p>CODO前端基于Vue iview开发、为用户提供友好的操作界面，增强用户体验</p>
+                    <p>CODO后端基于Python Tornado开发，其优势为轻量、简洁清晰、异步非阻塞</p>
+                    <p>CODO开源多云管理平台为用户提供多功能：ITSM、基于RBAC权限系统、Web Terminnal登陆日志审计、录像回放、强大的作业调度系统、CMDB、监控报警系统等</p>
+           </section>
+                <section id="contact">
+                    <h2>Contact</h2>
+
+                    <!--<form method="post" id="contact-form" action="contact.php">-->
+                    <p class="name">
+                        <label for="name" id="label_name">Name</label>
+                        <input id="name" type="text" class="required" placeholder="Name" name="name" />
+                    </p>
+                    <p class="sender">
+                        <label for="email" id="label_email">Email</label>
+                        <input id="email" class="email required" type="text" placeholder="Email address" name="email" />
+                    </p>
+                    <p class="msg">
+                        <label for="message" id="label_msg">Your message</label>
+                        <textarea id="message" class="required" placeholder="Your message" name="message"></textarea>
+                    </p>
+                    <input class="submit-button" type="submit" value="submit" onclick="post_message()" />
+                    <!--</form>-->
+                    <div class="decor"></div>
+                </section>
+            </div>
+            <footer id="footer">
+                <div class="wrapper">
+                    <ul>
+                        <li class="email">yanghongfei0911@gmail.com</li>
+                        <li class="address">New Pudong District, Shanghai</li>
+                        <li class="fb">Collect from <a href="https://www.facebook.com/FredYangxiaofei" title="Fred YangXiaoFei" target="_blank">Fred YangXiaoFei</a></li>
+                    </ul>
+                </div>
+            </footer>
+        </aside>
+
+</body>
+</html>

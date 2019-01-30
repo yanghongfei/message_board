@@ -1,0 +1,405 @@
+@font-face {
+    font-family: 'BebasNeueRegular';
+    src: url('fonts/bebasneue-webfont.eot');
+    src: url('fonts/bebasneue-webfont.eot@#iefix') format('eot'),
+        url('fonts/bebasneue-webfont.woff') format('woff'),
+        url('fonts/bebasneue-webfont.ttf') format('truetype'),
+        url('fonts/bebasneue-webfont.svg#webfontX0YNjQNl') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+header,footer,section,aside,nav,article {
+    display:block
+}
+
+/* [] LAYOUT */
+body {
+    margin: auto;
+    padding: 0;
+    background: #fff url(img/body-bg-1.png) repeat;
+    font-family: 'PT Sans', Arial, sans-serif;
+    font-size: 62.5%;
+    text-align: left;
+    color: #818181;
+}
+a {
+    color: #014d7c;
+    text-decoration: underline;
+}
+a:hover, a:focus {
+    text-decoration: none;
+}
+h1, h2, h3 {
+    font-family: 'BebasNeueRegular';
+}
+input, textarea {
+    color: #7f7f7f;
+    font-family: 'Lucida Grande';
+}
+#wrapper {
+    width: 960px;
+    overflow: hidden;
+    margin: 100px auto 100px auto;
+    text-align: center;
+}
+#content {
+    overflow: hidden;
+    margin-bottom: 50px;
+}
+#settings {
+    position: absolute;
+    left: 0;
+    top: 100px;
+}
+#settings li a {
+    width: 20px;
+    height: 20px;
+    margin-bottom: 5px;
+    text-indent: -9999px;
+    display: block;
+}
+#settings .button {
+    width: 32px;
+    height: 39px;
+    background: url(img/settings-button.png) 0 0 no-repeat;
+    display: block;
+    text-indent: -9999px;
+}
+.active .button {
+    background-position: -33px 0 !important;
+}
+#settings .content {
+    position: relative;
+    left: -35px;
+    background: #c8c8c8;
+    padding: 5px;
+    margin-top: 10px;
+}
+#settings .red a {
+    background: red;
+}
+#settings .blue a {
+    background: #066fc3;
+}
+#settings .green a {
+    background: #14b43e;
+}
+#settings .violet a {
+    background: #c02fc9;
+    margin-bottom: 0;
+}
+#settings .orange a {
+    background: #e66205;
+}
+#settings .backgrounds a {
+}
+#settings .bg {
+    background: #fff;
+}
+
+/* [] MAIN SECTION */
+#main-head {
+    font-size: 7em;
+    text-align: center;
+    margin: 0 auto 70px auto;
+}
+#timer {
+    overflow: hidden;
+    display: inline-block;
+}
+#timer .countdown_section {
+    width: 208px;
+    height: 208px;
+    background: url(img/circle-green.png) no-repeat;
+    float: left;
+    display: block;
+    overflow: hidden;
+    font-size: 1.8em;
+    color: #404040;
+    margin-right: 25px;
+}
+#timer .countdown_section:last-child {
+    margin-right: 0 !important;
+}
+#timer .countdown_amount {
+    font-size: 2.67em;
+    margin-top: 45px;
+    display: block;
+    font-weight: bold;
+}
+
+
+/* # SECONDARY */
+#secondary {
+    background: #0b8528 url(img/secondary-decor.png) top no-repeat;
+    padding-top: 50px;
+}
+#secondary .wrapper {
+    width: 900px;
+    margin: auto;
+    overflow: hidden;
+}
+#secondary h2 {
+    font-size: 3.6em;
+    color: #fff;
+    margin-bottom: 10px;
+}
+#about {
+    width: 380px;
+    float: left;
+}
+#about p {
+    font-size: 1.4em;
+    line-height: 1.9em;
+    color: #fff;
+    margin-bottom: 20px;
+}
+#contact {
+    float: right;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+}
+#contact h2 {
+    margin-bottom: 17px;
+}
+#contact .decor {
+    position: absolute;
+    width: 170px;
+    height: 45px;
+    background: url(img/leave-us-a-message.png) no-repeat;
+    bottom: 0px;
+    right: 30px;
+}
+#contact label {
+    display: none;
+}
+#contact label.error {
+    color: #fff;
+    font-size: 1.2em;
+}
+#contact input.error, #contact textarea.error {
+    margin-bottom: 5px;
+}
+#contact input, #contact textarea {
+    border: 0;
+    padding: 0;
+    background-color: #fff;
+    display: block;
+    font-size: 1.3em;
+}
+#contact .name, #contact .sender, #contact .msg {
+    margin-bottom: 20px;
+}
+#contact input {
+    width: 311px;
+    height: 36px;
+    padding-left: 50px;
+    line-height: 36px;
+}
+#contact .name input {
+    background: url(img/input-name.png) no-repeat;
+}
+#contact .sender input {
+    background: url(img/input-email.png) no-repeat;
+}
+#contact .msg textarea {
+    background: url(img/input-textarea.png) no-repeat;
+    width: 301px;
+    height: 134px;
+    padding: 10px 10px 10px 50px;
+}
+#contact .submit-button {
+    background: url(img/submit-green.png) 0 0 no-repeat;
+    width: 131px;
+    height: 36px;
+    text-indent: -9999px;
+}
+#contact .submit-button:hover, #kontakt .submit-button:focus {
+    background-position: -131px 0;
+    cursor: pointer;
+}
+#contact .submit-button:active {
+    background-position: -262px;
+}
+#footer {
+    background: url(img/footer-border-green.png) top repeat-x;
+}
+#footer .wrapper {
+    width: 900px;
+    margin: auto;
+    text-align: center;
+    padding: 30px 0;
+}
+#footer ul {
+    display: inline-block;
+}
+#footer li {
+    float: left;
+    height: 31px;
+    padding-left: 40px;
+    line-height: 31px;
+    color: #fff;
+    font-size: 1.4em;
+    margin-right: 76px;
+}
+#footer .email {
+    background: url(img/icon-email.png) no-repeat;
+}
+#footer .address {
+    background: url(img/icon-address.png) no-repeat;
+}
+#footer .fb {
+    background: url(img/icon-facebook.png) no-repeat;
+}
+#footer .twitter {
+    background: url(img/icon-twitter.png) no-repeat;
+    margin-right: 0;
+}
+#footer a {
+    color: #fff;
+}
+.copyrights{text-indent:-9999px;height:0;line-height:0;font-size:0;overflow:hidden;}
+
+/* [] NEWSLETTER */
+#newsletter {
+    text-align: center;
+}
+#newsletter .wrapper {
+    display: inline-block;
+}
+#newsletter p {
+    display: block;
+    float: left;
+}
+#newsletter label.main {
+    display: inline-block;
+    width: 212px;
+    height: 79px;
+    background: url(img/stay-informed.png) no-repeat;
+    text-indent: -9999px;
+    margin-right: 20px;
+}
+#newsletter label.error {
+    display: block;
+    margin-left: 235px;
+    font-size: 1.2em;
+    text-align: left;
+}
+#newsletter .email {
+    width: 303px;
+    height: 33px;
+    background: url(img/input-bg.png) no-repeat;
+    border: 0;
+    padding: 0 5px;
+    line-height: 33px;
+    font-size: 1.3em;
+}
+#newsletter .submit {
+    width: 130px;
+    height: 33px;
+    background: url(img/notifyme-green.png) no-repeat;
+    text-indent: -9999px;
+    border: 0;
+    float: left;
+    margin-left: 10px;
+}
+#newsletter .submit:hover {
+    cursor: pointer;
+    background-position: -130px;
+}
+#newsletter .submit:active {
+    background-position: -260px;
+}
+#newsletter .email, #newsletter .submit {
+    position: relative;
+    top: 50px;
+}
+
+
+/* [] RED COLOR */
+.color-red #newsletter .submit {
+    background-image: url(img/notifyme-red.png);
+}
+.color-red #timer .countdown_section {
+    background: url(img/circle-red.png) no-repeat;
+}
+.color-red #secondary {
+    background-color: #d00303;
+}
+.color-red #footer {
+    background-image: url(img/footer-border-red.png);
+}
+.color-red #contact .submit-button {
+    background-image: url(img/submit-red.png);
+}
+
+/* [] BLUE COLOR */
+.color-blue #newsletter .submit {
+    background-image: url(img/notifyme-blue.png);
+}
+.color-blue #timer .countdown_section {
+    background: url(img/circle-blue.png) no-repeat;
+}
+.color-blue #secondary {
+    background-color: #1279c5;
+}
+.color-blue #footer {
+    background-image: url(img/footer-border-blue.png);
+}
+.color-blue #contact .submit-button {
+    background-image: url(img/submit-blue.png);
+}
+
+/* [] GREEN COLOR */
+.color-green #newsletter .submit {
+    background-image: url(img/notifyme-green.png);
+}
+.color-green #timer .countdown_section {
+    background: url(img/circle-green.png) no-repeat;
+}
+.color-green #secondary {
+    background-color: #0b8528;
+}
+.color-green #footer {
+    background-image: url(img/footer-border-green.png);
+}
+.color-green #contact .submit-button {
+    background-image: url(img/submit-green.png);
+}
+
+/* [] ORANGE COLOR */
+.color-orange #newsletter .submit {
+    background-image: url(img/notifyme-orange.png);
+}
+.color-orange #timer .countdown_section {
+    background: url(img/circle-orange.png) no-repeat;
+}
+.color-orange #secondary {
+    background-color: #e15d07;
+}
+.color-orange #footer {
+    background-image: url(img/footer-border-orange.png);
+}
+.color-orange #contact .submit-button {
+    background-image: url(img/submit-orange.png);
+}
+
+/* [] VIOLET COLOR */
+.color-violet #newsletter .submit {
+    background-image: url(img/notifyme-violet.png);
+}
+.color-violet #timer .countdown_section {
+    background: url(img/circle-violet.png) no-repeat;
+}
+.color-violet #secondary {
+    background-color: #b82ec4;
+}
+.color-violet #footer {
+    background-image: url(img/footer-border-violet.png);
+}
+.color-violet #contact .submit-button {
+    background-image: url(img/submit-violet.png);
+}

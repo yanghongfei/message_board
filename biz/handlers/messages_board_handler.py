@@ -16,7 +16,7 @@ class MessagesBoardHandler(RequestHandler):
     """ Falut故障管理路由"""
 
     def get(self, *args, **kwargs):
-        self.render("board.html")
+        self.render("index.html")
 
     def post(self, *args, **kwargs):
         data = json.loads(self.request.body.decode("utf-8"))
