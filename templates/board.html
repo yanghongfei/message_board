@@ -14,7 +14,7 @@
             let email = document.getElementById('email').value;
             let message = document.getElementById('message').value;
             if (titile && email && message) {
-                axios.post('http://172.16.0.101:8888/messages_board', {
+                axios.post('/messages_board', {
                     title: titile,
                     email: email,
                     message: message,
@@ -49,7 +49,6 @@
     <!-- message: <input type="text" name="message" id="message"><br> -->
     message：<br/>
     <textarea rows="3" cols="20" id="message"></textarea>
-    <button type="button" onclick="post_message()">提交数据</button>
     <button type="button" onclick="post_message()">提交</button>
 </body>
 </html>
