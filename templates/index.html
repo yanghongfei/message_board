@@ -4,10 +4,11 @@
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>CloudOpenDevOps MessageBoard</title>
-        <link rel="stylesheet" href="../static/reset.css" title="" type="text/css" media="screen">
-        <link rel="stylesheet" href="../static/style.css" type="text/css" media="screen">
+        <link rel="stylesheet" href="../static/css/reset.css" title="" type="text/css" media="screen">
+        <link rel="stylesheet" href="../static/css/style.css" type="text/css" media="screen">
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
         <script type="text/javascript" src="static/js/board.js"></script>
+        <script type="text/javascript" src="static/js/mail.js"></script>
         <script>
         </script>
         <!--<script>-->
@@ -59,7 +60,6 @@
                 </ul>
             </div>
         </div>
-		<!--<div class="copyrights">Col <a href="http://www.cssmoban.com/"  title="��վģ��">��վģ��</a></div>-->
         <div id="wrapper">
             <!-- MAIN CONTENT  -->
             <section id="content">
@@ -68,17 +68,17 @@
                 <div class="aside" id="timer">
                 </div>
             </section>
-            <!--<aside id="newsletter">-->
-                <!--<div class="wrapper">-->
+            <aside id="newsletter">
+                <div class="wrapper">
                     <!--<form action="http://www.opendevops.cn" id="newsletter-form" method="get">-->
-                        <!--<p>-->
-                            <!--<label for="email" class="main">点击Click Me 访问官网</label>-->
-                            <!--<input type="text" name="email" class="email required" id="email" placeholder="http://www.opendevops.cn" />-->
-                        <!--</p>-->
-                        <!--<input type="submit" value="Click Me" class="submit" />-->
+                        <p>
+                            <label for="email" class="main">email</label>
+                            <input type="text" name="email" class="email required" id="to_list" placeholder="yanghongfei97@163.com" />
+                        </p>
+                        <input type="submit" value="Notify me" class="submit"  onclick="sendmail()"/>
                     <!--</form>-->
-                <!--</div>-->
-            <!--</aside>-->
+                </div>
+            </aside>
         </div>
         <aside id="secondary">
             <div class="wrapper">

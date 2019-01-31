@@ -18,7 +18,7 @@ class MessagesBoard(Base):
 
     # 项目表结构
     id = Column(Integer, primary_key=True, autoincrement=True)  # ID 自增长
-    title = Column(String(100), nullable=False)  #标题
+    name = Column(String(100), nullable=False)  #名字
     email = Column(String(100), nullable=False)  #邮件
     message = Column(LONGTEXT, nullable=True)    #内容
     create_at = Column(DateTime, nullable=False, default=datetime.now())  # 记录创建时间

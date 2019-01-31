@@ -10,6 +10,7 @@ from libs.application import Application as myapplication
 from settings import settings
 from biz.handlers.messages_board_handler import MessagesBoardHandler
 from biz.handlers.get_message_handler import GetMessageHandler
+from biz.handlers.sendmail_handler import SendMailHandler
 
 
 class Application(myapplication):
@@ -17,6 +18,7 @@ class Application(myapplication):
         handlers = [
             (r'/messages_board', MessagesBoardHandler),
             (r'/get_message', GetMessageHandler),
+            (r'/sendmail', SendMailHandler),
         ]
 
         super(Application, self).__init__(handlers, **settings)

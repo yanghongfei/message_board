@@ -1,37 +1,31 @@
-const post_message=()=>
+const sendmail=()=>
         {
-            let name = document.getElementById('name').value;
-            // console.log(name);
-            let email = document.getElementById('email').value;
-            // console.log(email)
-            let message = document.getElementById('message').value;
-            // console.log(message)
-            if (name && email && message) {
-                //判断邮箱格式
+            let to_list = document.getElementById('to_list').value;
+            // console.log(to_list);
+
+            if (to_list) {
                 var myreg = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
-                if (!myreg.test(email)) {
+                if (!myreg.test(to_list)) {
                     alert('提示\n\n请输入有效的E_mail！');
                     return false;
                 }
-                axios.post('/messages_board', {
-                    name: name,
-                    email: email,
-                    message: message,
+                axios.post('/sendmail', {
+                    to_list: to_list
                 })
                     .then(function (response) {
                         // console.log(response.data);
                         let jsonObj = response.data;
                         if (jsonObj.status == 0) {
-                            alert('提交成功');
+                            alert('我们已经发了一封测试邮件到你的邮箱，请查收');
                         } else {
                             alert(jsonObj.msg);
                         }
                     })
                     .catch(function (error) {
-                        alert('提交失败')
+                        alert('发送失败');
                         console.log(error);
                     });
             } else {
-                alert('Name, Email, Messages不可为空！');
+                alert('参数不可为空！');
             }
         }

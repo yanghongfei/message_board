@@ -9,7 +9,7 @@ import json
 from database import db_session
 from models.models import MessagesBoard
 from tornado.web import RequestHandler
-from libs.public import now_time
+from libs.public import now_time, check_mail_format
 
 
 class MessagesBoardHandler(RequestHandler):
@@ -20,11 +20,11 @@ class MessagesBoardHandler(RequestHandler):
 
     def post(self, *args, **kwargs):
         data = json.loads(self.request.body.decode("utf-8"))
-        title = data.get('title', None)
+        name = data.get('name', None)
         email = data.get('email', None)
         message = data.get('message', None)
 
-        if not title and not email and not message:
+        if not name and not email and not message:
             resp = {
                 'status': -1,
                 'data': data,
@@ -32,28 +32,35 @@ class MessagesBoardHandler(RequestHandler):
                 'msg': '参数不能为空'
             }
             return self.write(resp)
-
+        if not check_mail_format(email):
+            resp = {
+                'status': -10,
+                'data': data,
+                'datetime': now_time,
+                'msg': '邮箱格式不正确，请检查邮箱格式！'
+            }
+            return self.write(resp)
         else:
             try:
-                name_info = db_session.query(MessagesBoard).filter(MessagesBoard.title == title).first()
+                name_info = db_session.query(MessagesBoard).filter(MessagesBoard.message == message).first()
                 if name_info:
                     resp = {
                         'status': -2,
                         'data': data,
                         'datetime': now_time,
-                        'msg': '标题不可重复: {} 已经存在'.format(title)
+                        'msg': 'Message内容不可重复: {} 已经存在'.format(message)
                     }
                     return self.write(resp)
                 else:
                     db_session.add(
-                        MessagesBoard(title=title, email=email, message=message))
+                        MessagesBoard(name=name, email=email, message=message))
                     db_session.commit()
 
                     resp = {
                         'status': 0,
                         'data': data,
                         'datetime': now_time,
-                        'msg': 'Name: {} 添加成功'.format(title)
+                        'msg': 'Name: {} 添加成功'.format(name)
                     }
                     return self.write(resp)
 
@@ -71,17 +78,17 @@ class MessagesBoardHandler(RequestHandler):
 
     def put(self, *args, **kwargs):
         data = json.loads(self.request.body.decode("utf-8"))
-        title = data.get('title', None)
+        name = data.get('name', None)
         email = data.get('email', None)
         message = data.get('message', None)
 
         try:
             update_info = {
-                "title": title,
+                "name": name,
                 "email": email,
                 "message": message
             }
-            db_session.query(MessagesBoard).filter(MessagesBoard.title == title).update(update_info)
+            db_session.query(MessagesBoard).filter(MessagesBoard.name == name).update(update_info)
             db_session.commit()
             resp = {
                 'status': 0,
@@ -105,9 +112,9 @@ class MessagesBoardHandler(RequestHandler):
 
     def delete(self, *args, **kwargs):
         data = json.loads(self.request.body.decode("utf-8"))
-        title = data.get('title', None)
+        name = data.get('name', None)
 
-        if not title:
+        if not name:
             resp = {
                 'status': -1,
                 'data': data,
@@ -117,7 +124,7 @@ class MessagesBoardHandler(RequestHandler):
             return self.write(resp)
         else:
             try:
-                db_session.query(MessagesBoard).filter(MessagesBoard.title == title).delete(
+                db_session.query(MessagesBoard).filter(MessagesBoard.name == name).delete(
                     synchronize_session=False)
                 db_session.commit()
                 resp = {

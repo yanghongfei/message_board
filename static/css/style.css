@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'BebasNeueRegular';
-    src: url('fonts/bebasneue-webfont.eot');
-    src: url('fonts/bebasneue-webfont.eot@#iefix') format('eot'),
-        url('fonts/bebasneue-webfont.woff') format('woff'),
-        url('fonts/bebasneue-webfont.ttf') format('truetype'),
-        url('fonts/bebasneue-webfont.svg#webfontX0YNjQNl') format('svg');
+    src: url('../fonts/bebasneue-webfont.eot');
+    src: url('../fonts/bebasneue-webfont.eot@#iefix') format('eot'),
+        url('../fonts/bebasneue-webfont.woff') format('woff'),
+        url('../fonts/bebasneue-webfont.ttf') format('truetype'),
+        url('../fonts/bebasneue-webfont.svg#webfontX0YNjQNl') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -17,7 +17,7 @@ header,footer,section,aside,nav,article {
 body {
     margin: auto;
     padding: 0;
-    background: #fff url(img/body-bg-1.png) repeat;
+    background: #fff url(../img/body-bg-1.png) repeat;
     font-family: 'PT Sans', Arial, sans-serif;
     font-size: 62.5%;
     text-align: left;
@@ -62,7 +62,7 @@ input, textarea {
 #settings .button {
     width: 32px;
     height: 39px;
-    background: url(img/settings-button.png) 0 0 no-repeat;
+    background: url(../img/settings-button.png) 0 0 no-repeat;
     display: block;
     text-indent: -9999px;
 }
@@ -111,7 +111,7 @@ input, textarea {
 #timer .countdown_section {
     width: 208px;
     height: 208px;
-    background: url(img/circle-green.png) no-repeat;
+    background: url(../img/circle-green.png) no-repeat;
     float: left;
     display: block;
     overflow: hidden;
@@ -132,7 +132,7 @@ input, textarea {
 
 /* # SECONDARY */
 #secondary {
-    background: #0b8528 url(img/secondary-decor.png) top no-repeat;
+    background: #0b8528 url(../img/secondary-decor.png) top no-repeat;
     padding-top: 50px;
 }
 #secondary .wrapper {
@@ -169,7 +169,7 @@ input, textarea {
     position: absolute;
     width: 170px;
     height: 45px;
-    background: url(img/leave-us-a-message.png) no-repeat;
+    background: url(../img/leave-us-a-message.png) no-repeat;
     bottom: 0px;
     right: 30px;
 }
@@ -200,19 +200,19 @@ input, textarea {
     line-height: 36px;
 }
 #contact .name input {
-    background: url(img/input-name.png) no-repeat;
+    background: url(../img/input-name.png) no-repeat;
 }
 #contact .sender input {
-    background: url(img/input-email.png) no-repeat;
+    background: url(../img/input-email.png) no-repeat;
 }
 #contact .msg textarea {
-    background: url(img/input-textarea.png) no-repeat;
+    background: url(../img/input-textarea.png) no-repeat;
     width: 301px;
     height: 134px;
     padding: 10px 10px 10px 50px;
 }
 #contact .submit-button {
-    background: url(img/submit-green.png) 0 0 no-repeat;
+    background: url(../img/submit-green.png) 0 0 no-repeat;
     width: 131px;
     height: 36px;
     text-indent: -9999px;
@@ -225,7 +225,7 @@ input, textarea {
     background-position: -262px;
 }
 #footer {
-    background: url(img/footer-border-green.png) top repeat-x;
+    background: url(../img/footer-border-green.png) top repeat-x;
 }
 #footer .wrapper {
     width: 900px;
@@ -246,16 +246,16 @@ input, textarea {
     margin-right: 76px;
 }
 #footer .email {
-    background: url(img/icon-email.png) no-repeat;
+    background: url(../img/icon-email.png) no-repeat;
 }
 #footer .address {
-    background: url(img/icon-address.png) no-repeat;
+    background: url(../img/icon-address.png) no-repeat;
 }
 #footer .fb {
-    background: url(img/icon-facebook.png) no-repeat;
+    background: url(../img/icon-facebook.png) no-repeat;
 }
 #footer .twitter {
-    background: url(img/icon-twitter.png) no-repeat;
+    background: url(../img/icon-twitter.png) no-repeat;
     margin-right: 0;
 }
 #footer a {
@@ -278,7 +278,7 @@ input, textarea {
     display: inline-block;
     width: 212px;
     height: 79px;
-    background: url(img/stay-informed.png) no-repeat;
+    background: url(../img/stay-informed.png) no-repeat;
     text-indent: -9999px;
     margin-right: 20px;
 }
@@ -291,7 +291,7 @@ input, textarea {
 #newsletter .email {
     width: 303px;
     height: 33px;
-    background: url(img/input-bg.png) no-repeat;
+    background: url(../img/input-bg.png) no-repeat;
     border: 0;
     padding: 0 5px;
     line-height: 33px;
@@ -300,7 +300,7 @@ input, textarea {
 #newsletter .submit {
     width: 130px;
     height: 33px;
-    background: url(img/notifyme-green.png) no-repeat;
+    background: url(../img/notifyme-green.png) no-repeat;
     text-indent: -9999px;
     border: 0;
     float: left;
@@ -321,85 +321,85 @@ input, textarea {
 
 /* [] RED COLOR */
 .color-red #newsletter .submit {
-    background-image: url(img/notifyme-red.png);
+    background-image: url(../img/notifyme-red.png);
 }
 .color-red #timer .countdown_section {
-    background: url(img/circle-red.png) no-repeat;
+    background: url(../img/circle-red.png) no-repeat;
 }
 .color-red #secondary {
     background-color: #d00303;
 }
 .color-red #footer {
-    background-image: url(img/footer-border-red.png);
+    background-image: url(../img/footer-border-red.png);
 }
 .color-red #contact .submit-button {
-    background-image: url(img/submit-red.png);
+    background-image: url(../img/submit-red.png);
 }
 
 /* [] BLUE COLOR */
 .color-blue #newsletter .submit {
-    background-image: url(img/notifyme-blue.png);
+    background-image: url(../img/notifyme-blue.png);
 }
 .color-blue #timer .countdown_section {
-    background: url(img/circle-blue.png) no-repeat;
+    background: url(../img/circle-blue.png) no-repeat;
 }
 .color-blue #secondary {
     background-color: #1279c5;
 }
 .color-blue #footer {
-    background-image: url(img/footer-border-blue.png);
+    background-image: url(../img/footer-border-blue.png);
 }
 .color-blue #contact .submit-button {
-    background-image: url(img/submit-blue.png);
+    background-image: url(../img/submit-blue.png);
 }
 
 /* [] GREEN COLOR */
 .color-green #newsletter .submit {
-    background-image: url(img/notifyme-green.png);
+    background-image: url(../img/notifyme-green.png);
 }
 .color-green #timer .countdown_section {
-    background: url(img/circle-green.png) no-repeat;
+    background: url(../img/circle-green.png) no-repeat;
 }
 .color-green #secondary {
     background-color: #0b8528;
 }
 .color-green #footer {
-    background-image: url(img/footer-border-green.png);
+    background-image: url(../img/footer-border-green.png);
 }
 .color-green #contact .submit-button {
-    background-image: url(img/submit-green.png);
+    background-image: url(../img/submit-green.png);
 }
 
 /* [] ORANGE COLOR */
 .color-orange #newsletter .submit {
-    background-image: url(img/notifyme-orange.png);
+    background-image: url(../img/notifyme-orange.png);
 }
 .color-orange #timer .countdown_section {
-    background: url(img/circle-orange.png) no-repeat;
+    background: url(../img/circle-orange.png) no-repeat;
 }
 .color-orange #secondary {
     background-color: #e15d07;
 }
 .color-orange #footer {
-    background-image: url(img/footer-border-orange.png);
+    background-image: url(../img/footer-border-orange.png);
 }
 .color-orange #contact .submit-button {
-    background-image: url(img/submit-orange.png);
+    background-image: url(../img/submit-orange.png);
 }
 
 /* [] VIOLET COLOR */
 .color-violet #newsletter .submit {
-    background-image: url(img/notifyme-violet.png);
+    background-image: url(../img/notifyme-violet.png);
 }
 .color-violet #timer .countdown_section {
-    background: url(img/circle-violet.png) no-repeat;
+    background: url(../img/circle-violet.png) no-repeat;
 }
 .color-violet #secondary {
     background-color: #b82ec4;
 }
 .color-violet #footer {
-    background-image: url(img/footer-border-violet.png);
+    background-image: url(../img/footer-border-violet.png);
 }
 .color-violet #contact .submit-button {
-    background-image: url(img/submit-violet.png);
+    background-image: url(../img/submit-violet.png);
 }

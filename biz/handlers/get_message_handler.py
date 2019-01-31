@@ -14,8 +14,8 @@ from libs.public import now_time
 
 class GetMessageHandler(RequestHandler):
     def get(self, *args, **kwargs):
-        title = self.get_argument('title')
-        name_info = db_session.query(MessagesBoard).filter(MessagesBoard.title == title).all()
+        name = self.get_argument('name')
+        name_info = db_session.query(MessagesBoard).filter(MessagesBoard.name == name).all()
         # print(name_info[0].id)
         message = name_info[0].message
         resp = {
